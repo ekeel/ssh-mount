@@ -1,0 +1,11 @@
+{
+    "connections": {
+        "ekeelnet": {
+            "user": "ekeel",
+            "host": "45.55.37.200",
+            "remote": "/home/ekeel",
+            "local": "/tmp/testmount",
+            "localistemp": true
+        }
+    }
+}
