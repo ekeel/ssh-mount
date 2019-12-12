@@ -8,6 +8,10 @@ connection_name = None
 local_directory = None
 local_is_temporary = None
 
+home_dir = os.path.expanduser("~")
+
+config_file = home_dir + "/.config/sshmounter.json"
+
 
 if len(sys.argv) == 1:
     print("\nssh-unmount <CONNECTION_NAME>")
@@ -18,7 +22,7 @@ else:
     print("\nssh-unmount <CONNECTION_NAME>")
     exit(1)
 
-with open('config.json') as json_file:
+with open(config_file) as json_file:
     config_data = json.load(json_file)
 
     local_directory = config_data['connections'][connection_name]['local']
